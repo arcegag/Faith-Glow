@@ -39,31 +39,6 @@
             color: white;
             text-align: center;
         }
-        .hero h1 {
-            font-size: 42px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            margin-top: 20px;
-            background-color: #ff69b4;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #d64f87;
-            transform: scale(1.05);
-        }
         .tab-menu {
             display: flex;
             justify-content: center;
@@ -92,6 +67,17 @@
         .tab-content.active {
             display: block;
         }
+        ul {
+            text-align: left;
+            margin: 0 auto;
+            display: inline-block;
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -100,15 +86,15 @@
     </header>
     <div class="hero">
         <div>
-            <h1>Luxury Lash & Brow Services</h1>
-            <p>Enhancing your natural beauty with precision and care.</p>
+            <h1>Ready to Feel the Difference?</h1>
+            <p>We create the most comfortable, lightweight lashes for everyday wear.</p>
             <a href="#booking" class="btn">Book an Appointment</a>
         </div>
     </div>
     <div class="tab-menu">
-        <button onclick="openTab('services')" class="active">Services</button>
-        <button onclick="openTab('hours')">Hours</button>
-        <button onclick="openTab('booking')">Book</button>
+        <button onclick="openTab('services', 'https://images.pexels.com/photos/3997997/pexels-photo-3997997.jpeg')" class="active">Services</button>
+        <button onclick="openTab('hours', 'https://images.pexels.com/photos/3997998/pexels-photo-3997998.jpeg')">Hours</button>
+        <button onclick="openTab('booking', 'https://images.pexels.com/photos/3765134/pexels-photo-3765134.jpeg')">Book</button>
     </div>
     <div id="services" class="tab-content active">
         <h2>Our Services</h2>
@@ -136,7 +122,7 @@
         &copy; 2025 Heavenly Glow. All Rights Reserved.
     </footer>
     <script>
-        function openTab(tabName) {
+        function openTab(tabName, imageUrl) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
@@ -146,6 +132,7 @@
             tablinks.forEach(button => button.classList.remove("active"));
             document.getElementById(tabName).style.display = "block";
             event.currentTarget.classList.add("active");
+            document.querySelector(".hero").style.backgroundImage = `url('${imageUrl}')`;
         }
     </script>
 </body>
