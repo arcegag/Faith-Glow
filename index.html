@@ -9,7 +9,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff;
+            background: #fff;
             text-align: center;
             scroll-behavior: smooth;
             color: #333;
@@ -19,7 +19,6 @@
             padding: 25px;
             font-size: 32px;
             font-weight: bold;
-            letter-spacing: 1px;
             text-transform: uppercase;
             border-bottom: 3px solid #ff69b4;
         }
@@ -31,15 +30,33 @@
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://images.pexels.com/photos/3765134/pexels-photo-3765134.jpeg') no-repeat center center/cover;
+            padding: 120px 20px;
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
         .btn {
             display: inline-block;
-            padding: 16px 32px;
+            padding: 14px 28px;
             margin-top: 20px;
             background-color: #ff69b4;
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             transition: all 0.3s ease;
         }
@@ -47,34 +64,33 @@
             background-color: #d64f87;
             transform: scale(1.05);
         }
-        .gallery img {
-            width: 100%;
-            max-width: 450px;
-            margin: 15px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        .tab-menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
         }
-        .review {
-            background: #fff3f8;
-            padding: 30px;
-            margin: 20px auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            font-style: italic;
-        }
-        .stars {
-            color: gold;
-            font-size: 26px;
-            margin-top: 10px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            font-size: 22px;
+        .tab-menu button {
+            background: none;
+            border: none;
+            font-size: 20px;
             font-weight: bold;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
         }
-        ul li {
-            margin: 15px 0;
+        .tab-menu button:hover, .tab-menu button.active {
+            border-bottom: 3px solid #ff69b4;
+        }
+        .tab-content {
+            display: none;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .tab-content.active {
+            display: block;
         }
     </style>
 </head>
@@ -82,58 +98,55 @@
     <header>
         Heavenly Glow - Luxury Lash & Brow Studio
     </header>
-    <div class="container">
-        <h1>Effortless Beauty, Every Day</h1>
-        <p>Luxury lash & brow services designed for confidence and elegance. Wake up flawless, effortlessly.</p>
-        <a href="#services" class="btn">Explore Services</a>
+    <div class="hero">
+        <div>
+            <h1>Luxury Lash & Brow Services</h1>
+            <p>Enhancing your natural beauty with precision and care.</p>
+            <a href="#booking" class="btn">Book an Appointment</a>
+        </div>
     </div>
-    <div class="container" id="services">
-        <h2>Our Signature Services</h2>
+    <div class="tab-menu">
+        <button onclick="openTab('services')" class="active">Services</button>
+        <button onclick="openTab('hours')">Hours</button>
+        <button onclick="openTab('booking')">Book</button>
+    </div>
+    <div id="services" class="tab-content active">
+        <h2>Our Services</h2>
+        <p>We offer high-end lash and brow treatments tailored to your beauty needs.</p>
         <ul>
-            <li>🌟 Classic Lash Extensions - $99</li>
-            <li>🌟 Volume Lash Extensions - $129</li>
-            <li>🌟 Hybrid Lashes - $115</li>
-            <li>🌟 Brow Shaping & Tinting - $45</li>
-            <li>🌟 Lash Lift & Tint - $75</li>
+            <li>🌟 Classic Lash Extensions</li>
+            <li>🌟 Volume Lash Extensions</li>
+            <li>🌟 Hybrid Lashes</li>
+            <li>🌟 Brow Shaping & Tinting</li>
+            <li>🌟 Microblading & Powder Brows</li>
+            <li>🌟 Lash Lift & Tint</li>
         </ul>
-        <a href="#booking" class="btn">Book an Appointment</a>
     </div>
-    <div class="container" id="gallery">
-        <h2>Our Work Speaks for Itself</h2>
-        <div class="gallery">
-            <img src="https://source.unsplash.com/450x450/?lashes,beauty" alt="Lash Extension 1">
-            <img src="https://source.unsplash.com/450x450/?eyebrows,makeup" alt="Lash Extension 2">
-            <img src="https://source.unsplash.com/450x450/?brows,beauty" alt="Brow Shaping">
-        </div>
+    <div id="hours" class="tab-content">
+        <h2>Our Hours</h2>
+        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+        <p>Saturday - Sunday: Closed</p>
     </div>
-    <div class="container" id="reviews">
-        <h2>What Our Clients Say</h2>
-        <div class="review">
-            <p>"Absolutely love my lashes! They feel so light and natural, yet incredibly voluminous!"</p>
-            <div class="stars">★★★★★</div>
-        </div>
-        <div class="review">
-            <p>"Best beauty experience ever! The brows and lashes are PERFECTION!"</p>
-            <div class="stars">★★★★★</div>
-        </div>
-        <div class="review">
-            <p>"I feel more confident than ever thanks to Heavenly Glow!"</p>
-            <div class="stars">★★★★★</div>
-        </div>
-    </div>
-    <div class="container" id="booking">
+    <div id="booking" class="tab-content">
         <h2>Book Your Appointment</h2>
-        <p>Secure your beauty transformation today with our expert lash artists.</p>
+        <p>Secure your appointment with our expert lash and brow artists today.</p>
         <a href="https://www.yourbookinglink.com" target="_blank" class="btn">Schedule Now</a>
-    </div>
-    <div class="container" id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: heavenlyglow@example.com</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Location: 123 Beauty Lane, Glam City</p>
     </div>
     <footer>
         &copy; 2025 Heavenly Glow. All Rights Reserved.
     </footer>
+    <script>
+        function openTab(tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.querySelectorAll(".tab-menu button");
+            tablinks.forEach(button => button.classList.remove("active"));
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
