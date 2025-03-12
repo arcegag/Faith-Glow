@@ -49,14 +49,11 @@
             text-align: center;
             transition: background 0.5s ease-in-out;
             min-height: 450px;
-            filter: grayscale(40%);
+            filter: grayscale(40%) brightness(50%);
         }
         .hero-content {
-            background: rgba(255, 255, 255, 0.9);
             padding: 25px;
-            border-radius: 10px;
-            color: #5a4632;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            color: white;
         }
         .btn {
             display: inline-block;
@@ -77,29 +74,27 @@
         .service-section {
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             max-width: 1200px;
             margin: 50px auto;
             text-align: left;
+            padding: 20px;
         }
         .service-text {
             max-width: 500px;
         }
+        .service-image {
+            flex: 1;
+        }
         .service-image img {
-            width: 450px;
+            width: 100%;
+            max-width: 500px;
             border-radius: 10px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         }
         .service-list {
-            list-style: none;
-            padding: 0;
-        }
-        .service-list li {
-            font-size: 18px;
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -107,6 +102,7 @@
     <header>
         <div>Heavenly Glow</div>
         <nav>
+            <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="#hours">Hours</a>
             <a href="#booking">Book Now</a>
@@ -114,23 +110,22 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
-    <div class="hero">
+    <div class="hero" id="home">
         <div class="hero-content">
             <h1>Welcome to Heavenly Glow</h1>
             <p>Enhancing your natural beauty with expert precision and care.</p>
-            <a href="#booking" class="btn">Book an Appointment</a>
         </div>
     </div>
     <section id="services" class="service-section">
         <div class="service-text">
             <h2>Our Services</h2>
             <ul class="service-list">
-                <li>🌟 Classic Lash Extensions</li>
-                <li>🌟 Volume Lash Extensions</li>
-                <li>🌟 Hybrid Lashes</li>
-                <li>🌟 Brow Shaping & Tinting</li>
-                <li>🌟 Microblading & Powder Brows</li>
-                <li>🌟 Lash Lift & Tint</li>
+                <li>Classic Lash Extensions</li>
+                <li>Volume Lash Extensions</li>
+                <li>Hybrid Lashes</li>
+                <li>Brow Shaping & Tinting</li>
+                <li>Microblading & Powder Brows</li>
+                <li>Lash Lift & Tint</li>
             </ul>
         </div>
         <div class="service-image">
