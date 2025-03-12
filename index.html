@@ -9,35 +9,68 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #fff;
+            background: #f7f2ea;
             text-align: center;
             scroll-behavior: smooth;
             color: #333;
         }
         header {
-            background-color: #ffeff1;
-            padding: 25px;
-            font-size: 32px;
+            background-color: #f5e5d8;
+            padding: 20px;
+            font-size: 28px;
             font-weight: bold;
             text-transform: uppercase;
-            border-bottom: 3px solid #ff69b4;
+            border-bottom: 2px solid #c9a38f;
         }
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 50px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+            background: #fff;
+            border-bottom: 2px solid #c9a38f;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #a3785c;
         }
         .hero {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: url('https://images.pexels.com/photos/3765134/pexels-photo-3765134.jpeg') no-repeat center center/cover;
+            background: url('https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg') no-repeat center center/cover;
             padding: 120px 20px;
             color: white;
             text-align: center;
+            transition: background 0.5s ease-in-out;
+            min-height: 400px;
+        }
+        .hero-content {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            margin-top: 20px;
+            background-color: #a3785c;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #8a6149;
+            transform: scale(1.05);
         }
         .tab-menu {
             display: flex;
@@ -56,7 +89,7 @@
             transition: all 0.3s;
         }
         .tab-menu button:hover, .tab-menu button.active {
-            border-bottom: 3px solid #ff69b4;
+            border-bottom: 3px solid #a3785c;
         }
         .tab-content {
             display: none;
@@ -70,35 +103,42 @@
         ul {
             text-align: left;
             margin: 0 auto;
-            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             list-style: none;
             padding: 0;
         }
         ul li {
             font-size: 18px;
             margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
     </style>
 </head>
 <body>
-    <header>
-        Heavenly Glow - Luxury Lash & Brow Studio
-    </header>
+    <header>Heavenly Glow - Luxury Lash & Brow Studio</header>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#hours">Hours</a>
+        <a href="#booking">Book Now</a>
+    </nav>
     <div class="hero">
-        <div>
-            <h1>Ready to Feel the Difference?</h1>
-            <p>We create the most comfortable, lightweight lashes for everyday wear.</p>
-            <a href="#booking" class="btn">Book an Appointment</a>
+        <div class="hero-content">
+            <h1>Luxury Lash & Brow Services</h1>
+            <p>Enhancing your natural beauty with precision and care.</p>
+            <a href="#booking" class="btn">Book a Consultation</a>
         </div>
     </div>
     <div class="tab-menu">
-        <button onclick="openTab('services', 'https://images.pexels.com/photos/3997997/pexels-photo-3997997.jpeg')" class="active">Services</button>
-        <button onclick="openTab('hours', 'https://images.pexels.com/photos/3997998/pexels-photo-3997998.jpeg')">Hours</button>
-        <button onclick="openTab('booking', 'https://images.pexels.com/photos/3765134/pexels-photo-3765134.jpeg')">Book</button>
+        <button onclick="openTab('services', 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg')" class="active">Services</button>
+        <button onclick="openTab('hours', 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg')">Hours</button>
+        <button onclick="openTab('booking', 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg')">Book</button>
     </div>
     <div id="services" class="tab-content active">
         <h2>Our Services</h2>
-        <p>We offer high-end lash and brow treatments tailored to your beauty needs.</p>
         <ul>
             <li>🌟 Classic Lash Extensions</li>
             <li>🌟 Volume Lash Extensions</li>
