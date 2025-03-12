@@ -40,19 +40,27 @@
             color: #8a6a4f;
         }
         .hero {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             background: url('https://img.freepik.com/free-photo/pure-eye-makeup-with-brown-eyeshadow_114579-8619.jpg?t=st=1741752321~exp=1741755921~hmac=207b7e6bf00b78a4ad78a20143567e51306439e05a10c9494dd3e8211cf391a5&w=1060') no-repeat center center/cover;
             padding: 120px 20px;
-            color: white;
             text-align: center;
-            transition: background 0.5s ease-in-out;
             min-height: 450px;
-            filter: grayscale(40%) brightness(50%);
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text contrast */
         }
         .hero-content {
-            padding: 25px;
+            position: relative;
+            z-index: 2;
             color: white;
         }
         .btn {
