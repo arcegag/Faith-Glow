@@ -9,36 +9,35 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f5ece1;
+            background: #e6d7c3;
             text-align: center;
             scroll-behavior: smooth;
-            color: #333;
+            color: #5a4632;
         }
         header {
-            background-color: #f2d8c9;
-            padding: 20px;
-            font-size: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #cfb8a2;
+            padding: 20px 40px;
+            font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
-            border-bottom: 2px solid #b99382;
+            border-bottom: 2px solid #a3876f;
         }
         nav {
             display: flex;
-            justify-content: center;
             gap: 30px;
-            padding: 15px;
-            background: #fff;
-            border-bottom: 2px solid #b99382;
         }
         nav a {
             text-decoration: none;
-            color: #333;
+            color: #5a4632;
             font-size: 18px;
             font-weight: bold;
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #a16a50;
+            color: #8a6a4f;
         }
         .hero {
             display: flex;
@@ -50,24 +49,20 @@
             text-align: center;
             transition: background 0.5s ease-in-out;
             min-height: 450px;
+            filter: grayscale(40%);
         }
         .hero-content {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
             border-radius: 10px;
-            color: #333;
-        }
-        .call-now {
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #a16a50;
+            color: #5a4632;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         }
         .btn {
             display: inline-block;
             padding: 14px 28px;
             margin-top: 10px;
-            background-color: #a16a50;
+            background-color: #8a6a4f;
             color: white;
             text-decoration: none;
             border-radius: 8px;
@@ -76,28 +71,72 @@
             transition: all 0.3s ease;
         }
         .btn:hover {
-            background-color: #8a4d3a;
+            background-color: #6f533e;
             transform: scale(1.05);
+        }
+        .service-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 50px auto;
+            text-align: left;
+        }
+        .service-text {
+            max-width: 500px;
+        }
+        .service-image img {
+            width: 450px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+        .service-list li {
+            font-size: 18px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
     </style>
 </head>
 <body>
-    <header>Heavenly Glow - Luxury Lash & Brow Studio</header>
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#hours">Hours</a>
-        <a href="#booking">Book Now</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <header>
+        <div>Heavenly Glow</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#hours">Hours</a>
+            <a href="#booking">Book Now</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
     <div class="hero">
         <div class="hero-content">
-            <h1>Luxury Lash & Brow Services</h1>
-            <p>Enhancing your natural beauty with precision and care.</p>
-            <p class="call-now">📞 Call Now: (123) 456-7890</p>
+            <h1>Welcome to Heavenly Glow</h1>
+            <p>Enhancing your natural beauty with expert precision and care.</p>
             <a href="#booking" class="btn">Book an Appointment</a>
         </div>
     </div>
+    <section id="services" class="service-section">
+        <div class="service-text">
+            <h2>Our Services</h2>
+            <ul class="service-list">
+                <li>🌟 Classic Lash Extensions</li>
+                <li>🌟 Volume Lash Extensions</li>
+                <li>🌟 Hybrid Lashes</li>
+                <li>🌟 Brow Shaping & Tinting</li>
+                <li>🌟 Microblading & Powder Brows</li>
+                <li>🌟 Lash Lift & Tint</li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="https://img.freepik.com/free-photo/beauty-portrait-young-woman-with-perfect-makeup_144627-33296.jpg" alt="Lash Services">
+        </div>
+    </section>
     <footer>
         &copy; 2025 Heavenly Glow. All Rights Reserved.
     </footer>
